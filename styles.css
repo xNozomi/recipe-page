@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 100%;
+
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+/*Font weight to use are 400 for Young serif and 400, 600, 700 for Outfit*/
+body {
+  background-color: var(--stone-100);
+  display: flex;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+  color: var(--stone-600);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  width: 60%;
+  border-radius: 20px;
+  margin: 50px auto;
+}
+.main-content {
+  padding: 0 40px;
+}
+figure {
+  padding: 40px 40px 0 40px;
+}
+.recipe-picture {
+  width: 100%;
+  border-radius: 20px;
+}
+h1 {
+  font: 400 2rem "Young serif";
+  color: var(--stone-900);
+}
+.recipe-intro {
+  font: 400 1rem "Outfit";
+  color: var(--stone-600);
+  line-height: 1.5;
+}
+.prep-time {
+  background-color: var(--rose-50);
+  border-radius: 10px;
+  padding: 25px;
+}
+.prep-time p {
+  font: 600 1.3rem "Outfit";
+  color: var(--rose-800);
+}
+.prep-time li::marker {
+  color: var(--rose-800);
+  margin: 200px;
+}
+
+ul,
+ol {
+  list-style-position: outside;
+  padding-left: 25px;
+}
+li {
+  padding-left: 15px;
+}
+
+section li::marker {
+  color: var(--brown-800);
+  font-weight: 700;
+}
+section:not(.prep-time):not(.intro):not(.nutrition) {
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--stone-150);
+}
+section {
+  flex-direction: column;
+  display: flex;
+  line-height: 2;
+  margin: 30px 0;
+  gap: 15px;
+}
+section h2 {
+  font: 400 1.5rem "Young serif";
+  color: var(--brown-800);
+}
+section span {
+  font-weight: 700;
+}
+/*set TH and td value*/
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+th {
+  width: 50%;
+  font-weight: 400;
+  padding: 10px 0 10px 20px;
+}
+td {
+  font-weight: 700;
+  color: var(--brown-800);
+}
+tr:not(:last-child) {
+  border-bottom: 1px solid var(--stone-150);
+}
+/* Mobile style*/
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+
+  figure {
+    padding: 0;
+  }
+  .recipe-picture {
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 238px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+
+  figure {
+    padding: 0;
+  }
+  .recipe-picture {
+    border-radius: 0;
+  }
+}
